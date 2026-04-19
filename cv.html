@@ -4,22 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Özgeçmiş</title>
+    <title>Özgeçmiş - Muhammed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <h1>Muhammed - Özgeçmiş</h1>
-        <p>Teknoloji ve Yazılım Geliştiricisi</p>
-    </header>
+<body class="bg-light">
 
-    <section>
-        <h2>Eğitim</h2>
-        <article>
-            <h3>Üniversite Eğitimi</h3>
-            <p>Lisans Eğitimi - Devam Ediyor</p>
-        </article>
-    </section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Muhammed</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="text-center mb-5">
+            <h1 class="fw-bold">ÖZGEÇMİŞ</h1>
+            <p class="text-secondary">Teknoloji ve Yazılım Geliştiricisi</p>
+        </header>
+
+        <section class="mb-5">
+            <h2 class="h4 border-bottom pb-2">Eğitim</h2>
+            <article class="card border-0 shadow-sm p-3 mb-3">
+                <h3 class="h5">Sakarya Üniversitesi</h3>
+                <p class="mb-0 text-muted">Bilgisayar Mühendisliği / Web Teknolojileri Dersi Projesi</p>
+            </article>
+        </section>
+
+        <section>
+            <h2 class="h4 border-bottom pb-2">Öne Çıkan Projeler</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <article class="card h-100 border-0 shadow-sm p-3">
+                        <h3 class="h6 fw-bold">PostureX (DuruşKoç)</h3>
+                        <p class="small text-muted">Skolyoz erken uyarı sistemi için basınç haritalama teknolojisi.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <article class="card h-100 border-0 shadow-sm p-3">
+                        <h3 class="h6 fw-bold">SuNöbetçi</h3>
+                        <p class="small text-muted">Tarımda su tasarrufu sağlayan akıllı sulama algoritması.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
