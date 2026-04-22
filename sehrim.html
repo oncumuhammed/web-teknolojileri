@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehrim - Hatay</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Kendi Harici CSS Dosyamız -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navigasyon Menüsü -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Muhammed</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sehir.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">İletişim</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-primary ms-lg-3" href="#">Giriş Yap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- Şehir Tanıtım Başlığı -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold">HATAY</h1>
+            <p class="lead text-muted">Medeniyetler ve Hoşgörü Beşiği</p>
+        </div>
+
+        <!-- 4 Resimli Tıklanabilir Slider (Carousel) -->
+        <section class="mb-5">
+            <div id="sehirSlider" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/seed/hatay1/1200/500" class="d-block w-100" alt="">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Tarihi Antakya Sokakları</h5>
+                            <p>Taş evleri ve dar sokaklarıyla tarihe yolculuk.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/seed/hatay2/1200/500" class="d-block w-100" alt="">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Titus Tüneli</h5>
+                            <p>Roma döneminden kalma devasa mühendislik harikası.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/seed/hatay3/1200/500" class="d-block w-100" alt="">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Harbiye Şelaleleri</h5>
+                            <p>Mitolojik hikayelere konu olmuş doğa harikası.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/seed/hatay4/1200/500" class="d-block w-100" alt="">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Hatay Arkeoloji Müzesi</h5>
+                            <p>Dünyanın en büyük mozaik müzelerinden biri.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Önceki</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sonraki</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Şehir Bilgileri ve Mirasımız -->
+        <div class="row mb-5">
+            <!-- Hakkında Bilgileri -->
+            <div class="col-md-6 mb-4">
+                <article class="p-4 bg-white shadow-sm rounded h-100">
+                    <h2 class="h3 border-bottom pb-2">Şehir Hakkında</h2>
+                    <ul class="list-group list-group-flush mt-3">
+                        <li class="list-group-item"><strong>Nüfus:</strong> 1.6 Milyon</li>
+                        <li class="list-group-item"><strong>Bölge:</strong> Akdeniz Bölgesi</li>
+                        <li class="list-group-item"><strong>Plaka Kodu:</strong> 31</li>
+                    </ul>
+                    <h4 class="h5 mt-4">Gezilecek Önemli Yerler</h4>
+                    <p>Hatay Arkeoloji Müzesi, Titus Tüneli, Beşikli Mağara, Harbiye Şelaleleri, Uzun Çarşı, St. Pierre
+                        Kilisesi.</p>
+                </article>
+            </div>
+
+            <!-- Mirasımız Bölümü -->
+            <div class="col-md-6 mb-4">
+                <article class="p-4 bg-white shadow-sm rounded h-100 miras-card">
+                    <h2 class="h3 border-bottom pb-2 text-primary">Kültürel Mirasımız</h2>
+                    <h3 class="h5 mt-3">Habib-i Neccar Camii</h3>
+                    <img src="https://picsum.photos/seed/habibineccar/600/300" class="img-fluid rounded mb-3 mt-2"
+                        alt="">
+                    <p class="text-muted">
+                        Antakya'da bulunan ve Anadolu sınırları içerisinde inşa edilen ilk cami olarak kabul edilen
+                        tarihi yapıdır.
+                        Farklı inançlara sahip insanların yüzyıllardır bir arada yaşadığı Hatay'da, hoşgörü ve
+                        kardeşliğin en önemli sembollerinden biridir.
+                    </p>
+                </article>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
