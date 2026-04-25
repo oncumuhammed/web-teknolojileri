@@ -5,58 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkında - Web Teknolojileri Projesi</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Kendi Harici CSS Dosyamız -->
+    <!-- Bootstrap CSS -->
+    <link
+        href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)"
+        rel="stylesheet">
+    <!-- Harici CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-light">
+<body>
 
     <!-- Navigasyon Menüsü -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top mb-5">
         <div class="container">
             <a class="navbar-brand" href="index.html">Muhammed</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Hakkında</a></li>
                     <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link disabled" href="#">İletişim</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary ms-lg-3" href="#">Giriş Yap</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-modern btn-sm" href="#">Giriş
+                            Yap</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container bg-white p-5 shadow-sm rounded">
-        <h1 class="display-4">Merhaba, Ben Muhammed</h1>
-        <hr>
-        <p class="lead text-muted">Yazılım mimarileri ve otomasyon sistemleri üzerine tutkulu bir geliştiriciyim.</p>
-
-        <div class="row mt-4">
-            <div class="col-md-8">
-                <h3>Kişisel Bilgiler</h3>
-                <p>Şu anda Sakarya Üniversitesi'nde eğitimime devam etmekteyim. Teknolojiye olan ilgim, karmaşık
-                    sorunlara basit ve etkili çözümler üretme isteğimden doğdu.</p>
+    <div class="container fade-in">
+        <div class="modern-card p-5 mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-primary mb-2 px-3 py-2 rounded-pill">Yazılım Geliştirici</span>
+                    <h1 class="display-4 fw-bold text-dark mb-3">Merhaba, Ben Muhammed.</h1>
+                    <p class="lead text-muted mb-4">
+                        Sakarya Üniversitesi'nde eğitimime devam ediyorum. Yazılım mimarileri, otomasyon sistemleri ve
+                        insanlık yararına teknoloji geliştirme üzerine tutkulu bir geliştiriciyim. Karmaşık sorunlara
+                        basit, ölçeklenebilir ve modern çözümler üretmeyi seviyorum.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <img src="[https://ui-avatars.com/api/?name=Muhammed&background=0d6efd&color=fff&size=200](https://ui-avatars.com/api/?name=Muhammed&background=0d6efd&color=fff&size=200)"
+                        alt="" class="rounded-circle shadow-lg img-fluid border border-4 border-white">
+                </div>
             </div>
-            <div class="col-md-4 bg-light p-3 border rounded">
-                <h5>İlgi Alanlarım</h5>
-                <ul class="list-unstyled">
-                    <li>🏋️ Vücut Geliştirme</li>
-                    <li>💻 IoT & Sunucu Yönetimi</li>
-                    <li>🤖 Yapay Zeka</li>
-                </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="modern-card p-4 h-100">
+                    <h3 class="h4 border-bottom pb-3 mb-4">Mottom</h3>
+                    <p class="text-secondary fs-5 fst-italic">
+                        "Teknoloji, sadece bir araç değil; hayatı kolaylaştıran, sorunları çözen ve geleceği inşa eden
+                        bir sanat formudur."
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="modern-card p-4 h-100 bg-primary text-white">
+                    <h3 class="h4 border-bottom border-light pb-3 mb-4 text-white">İlgi Alanlarım</h3>
+                    <ul class="list-unstyled fs-5">
+                        <li class="mb-2">🏋️ Vücut Geliştirme & Fitness</li>
+                        <li class="mb-2">💻 IoT & Sunucu Yönetimi (Linux)</li>
+                        <li class="mb-2">🤖 Otomasyon & Web Botları</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+        src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
 </body>
 
 </html>

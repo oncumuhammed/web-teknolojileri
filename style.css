@@ -1,31 +1,125 @@
-/* Tüm sayfalar için geçerli olacak genel stil kodları.
-  PDF Kuralı: Tüm stiller harici bir dosyada (.css) tutulmalıdır.
+/* Modern UI Tasarım Sistemi 
+  Tüm sayfalar için geçerli harici stil dosyası 
 */
 
+/* Google Fonts - Inter */
+@import url('[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+    /* Çok hafif, modern bir gri/mavi arkaplan */
+    color: #2c3e50;
+    line-height: 1.6;
 }
 
-/* Slider (Carousel) içindeki resimlerin aynı boyutta ve düzgün görünmesi için */
-.carousel-item img {
-    height: 500px;
-    object-fit: cover;
+/* Başlıkların daha tok durması için */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+/* --- Navbar (Buzlu Cam Efekti) --- */
+.custom-navbar {
+    background: rgba(25, 27, 31, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
+}
+
+.custom-navbar .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 16px !important;
     border-radius: 8px;
 }
 
-/* Mirasımız kartı için özel bir hover (üzerine gelme) efekti */
-.miras-card {
-    transition: transform 0.3s ease;
-    border-left: 5px solid #0d6efd;
-    /* Bootstrap primary rengi */
+.custom-navbar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff !important;
 }
 
-.miras-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+/* --- Modern Kart Tasarımı --- */
+.modern-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 16px;
+    /* Daha oval köşeler */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
 }
 
-/* Navbar linklerine hafif bir geçiş efekti */
-.navbar-nav .nav-link {
-    transition: color 0.3s;
+.modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-header-custom {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: none;
+    padding: 20px;
+}
+
+/* --- Slider (Carousel) İyileştirmeleri --- */
+#sehirSlider {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    height: 550px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 30px;
+    border-radius: 0;
+}
+
+/* --- Buton İyileştirmeleri --- */
+.btn-modern {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+}
+
+/* --- Sayfa Yüklenme Animasyonu --- */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* API Sayfası Yükleniyor İkonu */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
 }

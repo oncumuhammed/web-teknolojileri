@@ -5,101 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özgeçmiş - Muhammed</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Kendi Harici CSS Dosyamız -->
+    <!-- Bootstrap CSS -->
+    <link
+        href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)"
+        rel="stylesheet">
+    <!-- Harici CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-light">
+<body>
 
     <!-- Navigasyon Menüsü -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top mb-5">
         <div class="container">
             <a class="navbar-brand" href="index.html">Muhammed</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
                     <li class="nav-item"><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link disabled" href="#">İletişim</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary ms-lg-3" href="#">Giriş Yap</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-modern btn-sm" href="#">Giriş
+                            Yap</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container fade-in">
         <header class="text-center mb-5">
-            <h1 class="fw-bold">ÖZGEÇMİŞ</h1>
-            <p class="text-secondary">Teknoloji ve Yazılım Geliştiricisi</p>
+            <h1 class="display-5 fw-bold text-dark">Özgeçmiş</h1>
+            <p class="lead text-secondary">Eğitim, Deneyim ve Projelerim</p>
         </header>
 
-        <section class="mb-5">
-            <h2 class="h4 border-bottom pb-2">Eğitim</h2>
-            <article class="card border-0 shadow-sm p-3 mb-3">
-                <h3 class="h5">Sakarya Üniversitesi</h3>
-                <p class="mb-0 text-muted">Bilgisayar Mühendisliği / Lisans Eğitimi</p>
-            </article>
-        </section>
+        <div class="row">
+            <!-- Sol Kolon: Eğitim ve Deneyim -->
+            <div class="col-lg-4 mb-4">
+                <section class="mb-5">
+                    <h2 class="h4 mb-4 text-primary">Eğitim</h2>
+                    <article class="modern-card p-4 mb-4 border-start border-primary border-4">
+                        <h3 class="h5 fw-bold">Sakarya Üniversitesi</h3>
+                        <p class="mb-0 text-muted">Bilgisayar Mühendisliği <br> <small>Lisans Eğitimi - Devam
+                                Ediyor</small></p>
+                    </article>
+                </section>
 
-        <section class="mb-5">
-            <h2 class="h4 border-bottom pb-2">Deneyim & Danışmanlık</h2>
-            <article class="card border-0 shadow-sm p-3 mb-3">
-                <h3 class="h5">Teknofest Takım Danışmanlığı</h3>
-                <p class="mb-0 text-muted">Ortaokul düzeyindeki Teknofest takımlarına proje geliştirme ve teknik
-                    danışmanlık desteği verilmektedir.</p>
-            </article>
-        </section>
-
-        <section>
-            <h2 class="h4 border-bottom pb-2">Geliştirdiğim Yazılım ve Otomasyon Projeleri</h2>
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <article class="card h-100 border-0 shadow-sm p-3">
-                        <h3 class="h6 fw-bold">Sunucu Yönetim Otomasyonu</h3>
-                        <p class="small text-muted">Linux sunucularda otomatik yedekleme, log analizi ve sistem izleme
-                            işlemlerini gerçekleştiren Bash/Python betikleri.</p>
+                <section>
+                    <h2 class="h4 mb-4 text-primary">Danışmanlık</h2>
+                    <article class="modern-card p-4 border-start border-success border-4">
+                        <h3 class="h5 fw-bold">Teknofest Takım Danışmanı</h3>
+                        <p class="mb-0 text-muted text-sm">Ortaokul düzeyindeki Teknofest takımlarına yazılım, donanım
+                            ve proje geliştirme süreçlerinde teknik danışmanlık.</p>
                     </article>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <article class="card h-100 border-0 shadow-sm p-3">
-                        <h3 class="h6 fw-bold">Web Scraper (Veri Madenciliği) Botu</h3>
-                        <p class="small text-muted">Python tabanlı, belirlenen hedeflerden periyodik olarak veri çekip
-                            raporlayan ve veritabanına kaydeden otomasyon botu.</p>
-                    </article>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <article class="card h-100 border-0 shadow-sm p-3">
-                        <h3 class="h6 fw-bold">IoT Akıllı Röle Kontrol Sistemi</h3>
-                        <p class="small text-muted">ESP8266/ESP32 kullanılarak donanımların uzaktan, web arayüzü
-                            üzerinden kontrol edilmesini sağlayan otomasyon altyapısı.</p>
-                    </article>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <article class="card h-100 border-0 shadow-sm p-3">
-                        <h3 class="h6 fw-bold">Asistan ve Bildirim Botu (Discord/Telegram)</h3>
-                        <p class="small text-muted">API entegrasyonları ile sunucu içi bildirimleri, otomatik
-                            mesajlamayı ve periyodik görevleri yöneten asistan yazılımı.</p>
-                    </article>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <article class="card h-100 border-0 shadow-sm p-3">
-                        <h3 class="h6 fw-bold">Stok ve Süreç Takip Scripti</h3>
-                        <p class="small text-muted">PHP ve MySQL kullanılarak geliştirilmiş, envanter giriş-çıkış
-                            süreçlerini otomatize eden CRUD tabanlı web uygulaması.</p>
-                    </article>
-                </div>
+                </section>
             </div>
-        </section>
+
+            <!-- Sağ Kolon: Projeler -->
+            <div class="col-lg-8">
+                <section>
+                    <h2 class="h4 mb-4 text-primary">Geliştirdiğim Yazılım ve Otomasyon Projeleri</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <article class="modern-card h-100 p-4">
+                                <h3 class="h6 fw-bold text-dark mb-2">💻 Sunucu Yönetim Otomasyonu</h3>
+                                <p class="small text-secondary mb-0">Linux sunucularda otomatik yedekleme, log analizi
+                                    ve sistem izleme işlemlerini gerçekleştiren Bash/Python betikleri.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <article class="modern-card h-100 p-4">
+                                <h3 class="h6 fw-bold text-dark mb-2">🕷️ Web Scraper (Veri Madenciliği)</h3>
+                                <p class="small text-secondary mb-0">Python tabanlı, belirlenen hedeflerden periyodik
+                                    olarak veri çekip raporlayan ve veritabanına kaydeden otomasyon botu.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <article class="modern-card h-100 p-4">
+                                <h3 class="h6 fw-bold text-dark mb-2">🔌 IoT Akıllı Röle Sistemi</h3>
+                                <p class="small text-secondary mb-0">ESP8266/ESP32 kullanılarak donanımların uzaktan,
+                                    web arayüzü üzerinden kontrol edilmesini sağlayan altyapı.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <article class="modern-card h-100 p-4">
+                                <h3 class="h6 fw-bold text-dark mb-2">🤖 Asistan ve Bildirim Botu</h3>
+                                <p class="small text-secondary mb-0">API entegrasyonları ile sunucu içi bildirimleri,
+                                    otomatik mesajlamayı ve periyodik görevleri yöneten asistan yazılımı.</p>
+                            </article>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <article class="modern-card p-4">
+                                <h3 class="h6 fw-bold text-dark mb-2">📦 Stok ve Süreç Takip Scripti</h3>
+                                <p class="small text-secondary mb-0">PHP ve MySQL kullanılarak geliştirilmiş, envanter
+                                    giriş-çıkış süreçlerini otomatize eden CRUD tabanlı özel web uygulaması.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+        src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
 </body>
 
 </html>
