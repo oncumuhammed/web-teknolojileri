@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Web Teknolojileri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex align-items-center py-4 bg-light" style="min-height: 100vh;">
+
+    <main class="w-100 m-auto fade-in" style="max-width: 400px;">
+        <div class="modern-card p-5 text-center">
+            <h1 class="h3 mb-4 fw-bold text-dark">Sisteme Giriş</h1>
+
+            <!-- Hata mesajı kutusu (PHP'den dönen URL parametresine göre tetiklenir) -->
+            <div id="error-alert" class="alert alert-danger d-none text-start small fw-bold" role="alert"></div>
+
+            <form action="giris.php" method="POST">
+                <div class="form-floating mb-3 text-start">
+                    <input type="email" class="form-control" id="email" name="email"
+                        placeholder="b123456789@sakarya.edu.tr">
+                    <label for="email">Öğrenci E-posta Adresi</label>
+                </div>
+
+                <div class="form-floating mb-4 text-start">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifre">
+                    <label for="password">Şifre (Öğrenci No)</label>
+                </div>
+
+                <button class="btn btn-primary btn-modern w-100 py-2 mb-3" type="submit">Giriş Yap</button>
+                <a href="index.html" class="text-decoration-none text-secondary small">Ana Sayfaya Dön</a>
+            </form>
+        </div>
+    </main>
+
+    <!-- PHP'den gelen hata parametresini yakalayan JS scripti -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorAlert = document.getElementById('error-alert');
+
+        if (urlParams.get('error') === 'empty') {
+            errorAlert.textContent = "Kullanıcı adı ve şifre boş bırakılamaz!";
+            errorAlert.classList.remove('d-none');
+        } else if (urlParams.get('error') === 'wrong') {
+            errorAlert.textContent = "Hatalı e-posta veya şifre girdiniz!";
+            errorAlert.classList.remove('d-none');
+        }
+    </script>
+</body>
+
+</html>

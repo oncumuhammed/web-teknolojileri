@@ -5,19 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim - Web Teknolojileri</title>
-    <!-- Bootstrap CSS -->
     <link
         href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)"
         rel="stylesheet">
-    <!-- Harici CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Vue 3 CDN (Form Doğrulaması İçin) -->
     <script src="[https://unpkg.com/vue@3/dist/vue.global.js](https://unpkg.com/vue@3/dist/vue.global.js)"></script>
 </head>
 
 <body>
-
-    <!-- Navigasyon Menüsü -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top mb-5">
         <div class="container">
             <a class="navbar-brand" href="index.html">Muhammed</a>
@@ -31,14 +26,14 @@
                     <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-modern btn-sm" href="#">Giriş
-                            Yap</a></li>
+                    <!-- GİRİŞ YAP LİNKİ GÜNCELLENDİ -->
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-modern btn-sm"
+                            href="login.html">Giriş Yap</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Vue App ID'si ile sarmalanmış form alanı -->
     <main class="container fade-in" id="app">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -47,7 +42,6 @@
                     <p class="text-muted mb-4">Görüş, öneri veya projeler için aşağıdaki formu kullanarak bana
                         ulaşabilirsiniz.</p>
 
-                    <!-- Hata Mesajları Paneli (Vue.js ve Native JS buraya yazdıracak) -->
                     <div id="error-box" class="alert alert-danger d-none" role="alert"></div>
                     <div v-if="vueErrors.length > 0" class="alert alert-danger" role="alert">
                         <ul class="mb-0">
@@ -55,18 +49,13 @@
                         </ul>
                     </div>
 
-                    <!-- İletişim Formu (Aksiyon olarak PHP sayfasına gidecek) -->
                     <form action="islem.php" method="POST" id="iletisimFormu">
-
                         <div class="row">
-                            <!-- Text Input: Ad Soyad -->
                             <div class="col-md-6 mb-3">
                                 <label for="ad" class="form-label fw-bold">Ad Soyad</label>
                                 <input type="text" class="form-control" id="ad" name="ad" v-model="form.ad"
                                     placeholder="Adınız Soyadınız">
                             </div>
-
-                            <!-- Email Input -->
                             <div class="col-md-6 mb-3">
                                 <label for="email" class="form-label fw-bold">E-posta</label>
                                 <input type="email" class="form-control" id="email" name="email" v-model="form.email"
@@ -75,14 +64,11 @@
                         </div>
 
                         <div class="row">
-                            <!-- Text Input: Telefon (Sadece Rakam) -->
                             <div class="col-md-6 mb-3">
                                 <label for="telefon" class="form-label fw-bold">Telefon Numarası</label>
                                 <input type="text" class="form-control" id="telefon" name="telefon"
                                     v-model="form.telefon" placeholder="05550001122">
                             </div>
-
-                            <!-- Select Box: Konu Seçimi -->
                             <div class="col-md-6 mb-3">
                                 <label for="konu" class="form-label fw-bold">Konu</label>
                                 <select class="form-select" id="konu" name="konu" v-model="form.konu">
@@ -94,7 +80,6 @@
                             </div>
                         </div>
 
-                        <!-- Radio Buttons: Cinsiyet -->
                         <div class="mb-3">
                             <label class="form-label fw-bold d-block">Cinsiyetiniz</label>
                             <div class="form-check form-check-inline">
@@ -114,71 +99,52 @@
                             </div>
                         </div>
 
-                        <!-- Textarea: Mesaj -->
                         <div class="mb-3">
                             <label for="mesaj" class="form-label fw-bold">Mesajınız</label>
                             <textarea class="form-control" id="mesaj" name="mesaj" rows="4" v-model="form.mesaj"
                                 placeholder="Mesajınızı buraya yazınız..."></textarea>
                         </div>
 
-                        <!-- Checkbox: Onay -->
                         <div class="mb-4 form-check">
                             <input type="checkbox" class="form-check-input" id="onay" name="onay" v-model="form.onay">
                             <label class="form-check-label small text-muted" for="onay">Verilerimin işlenmesini ve
                                 iletişim şartlarını onaylıyorum.</label>
                         </div>
 
-                        <!-- Çift Buton Doğrulama Alanı -->
                         <div class="d-flex gap-3">
-                            <!-- Buton 1: Native JavaScript ile Gönder -->
-                            <button type="button" class="btn btn-primary btn-modern w-50" onclick="validateNative()">
-                                Native JS ile Gönder
-                            </button>
-
-                            <!-- Buton 2: Vue.js Framework ile Gönder -->
-                            <button type="button" class="btn btn-success btn-modern w-50" @click="validateVue">
-                                Vue.js ile Gönder
-                            </button>
+                            <button type="button" class="btn btn-primary btn-modern w-50"
+                                onclick="validateNative()">Native JS ile Gönder</button>
+                            <button type="button" class="btn btn-success btn-modern w-50" @click="validateVue">Vue.js
+                                ile Gönder</button>
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- NATIVE JAVASCRIPT DOĞRULAMA KODLARI -->
     <script>
         function validateNative() {
             let errors = [];
-
-            // Verileri DOM'dan oku ve boşlukları temizle
             let ad = document.getElementById('ad').value.trim();
             let email = document.getElementById('email').value.trim();
             let telefon = document.getElementById('telefon').value.trim();
             let konu = document.getElementById('konu').value;
             let mesaj = document.getElementById('mesaj').value.trim();
             let onay = document.getElementById('onay').checked;
-
-            // Radio button seçimi kontrolü
             let cinsiyetElement = document.querySelector('input[name="cinsiyet"]:checked');
             let cinsiyet = cinsiyetElement ? cinsiyetElement.value : null;
 
-            // Kurallar
             if (ad === "") errors.push("Native JS: Ad Soyad alanı boş bırakılamaz.");
-
             let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) errors.push("Native JS: Geçerli bir e-posta adresi giriniz.");
-
             let telefonRegex = /^[0-9]+$/;
             if (!telefonRegex.test(telefon)) errors.push("Native JS: Telefon numarası sadece rakamlardan oluşmalıdır.");
-
             if (konu === "") errors.push("Native JS: Lütfen bir konu seçiniz.");
             if (!cinsiyet) errors.push("Native JS: Lütfen cinsiyet seçiminizi yapınız.");
             if (mesaj === "") errors.push("Native JS: Mesaj alanı boş bırakılamaz.");
             if (!onay) errors.push("Native JS: Kullanım şartlarını onaylamalısınız.");
 
-            // Hata gösterme / Form Gönderme
             let errorBox = document.getElementById('error-box');
             if (errors.length > 0) {
                 errorBox.innerHTML = "<strong>Lütfen Hataları Düzeltin:</strong><br>" + errors.join('<br>');
@@ -190,47 +156,29 @@
             }
         }
     </script>
-
-    <!-- VUE.JS DOĞRULAMA KODLARI -->
     <script>
         const { createApp } = Vue;
-
         createApp({
             data() {
                 return {
-                    form: {
-                        ad: '',
-                        email: '',
-                        telefon: '',
-                        konu: '',
-                        cinsiyet: null,
-                        mesaj: '',
-                        onay: false
-                    },
+                    form: { ad: '', email: '', telefon: '', konu: '', cinsiyet: null, mesaj: '', onay: false },
                     vueErrors: []
                 }
             },
             methods: {
                 validateVue() {
                     this.vueErrors = [];
-                    // Hata kutusunu sıfırla (Native JS ile çakışmaması için)
                     document.getElementById('error-box').classList.add('d-none');
-
-                    // Kurallar
                     if (!this.form.ad.trim()) this.vueErrors.push("Vue.js: Ad Soyad alanı boş bırakılamaz.");
-
                     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(this.form.email.trim())) this.vueErrors.push("Vue.js: Geçerli bir e-posta adresi giriniz.");
-
                     let telefonRegex = /^[0-9]+$/;
                     if (!telefonRegex.test(this.form.telefon.trim())) this.vueErrors.push("Vue.js: Telefon numarası sadece rakamlardan oluşmalıdır.");
-
                     if (!this.form.konu) this.vueErrors.push("Vue.js: Lütfen bir konu seçiniz.");
                     if (!this.form.cinsiyet) this.vueErrors.push("Vue.js: Lütfen cinsiyet seçiminizi yapınız.");
                     if (!this.form.mesaj.trim()) this.vueErrors.push("Vue.js: Mesaj alanı boş bırakılamaz.");
                     if (!this.form.onay) this.vueErrors.push("Vue.js: Kullanım şartlarını onaylamalısınız.");
 
-                    // Hata Yoksa Gönder
                     if (this.vueErrors.length === 0) {
                         alert("Vue.js: Doğrulama Başarılı! Verileriniz sunucuya iletiliyor...");
                         document.getElementById('iletisimFormu').submit();
@@ -239,8 +187,6 @@
             }
         }).mount('#app')
     </script>
-
-    <!-- Bootstrap JS -->
     <script
         src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
 </body>
