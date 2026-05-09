@@ -10,7 +10,7 @@ Bu proje, Sakarya Üniversitesi Bilgisayar Mühendisliği Web Teknolojileri ders
 
 ## 🔗 Proje Bağlantıları
 - **GitHub Reposu:** (https://github.com/oncumuhammed/web-teknolojileri)
-- **Canlı Site Linki (Hosting):** [000webhost veya InfinityFree Linki Buraya Gelecek]
+- **Canlı Site Linki (http://oncumuhammed.great-site.net)
 
 ## 🚀 Kullanılan Teknolojiler
 - **Frontend:** HTML5 (Semantik yapılar), CSS3 (Modern UI, Harici Stil Dosyası)
