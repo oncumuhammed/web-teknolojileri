@@ -1,82 +1,173 @@
-```html
 <!DOCTYPE html>
 <html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkında - Web Teknolojileri Projesi</title>
-    <link
-        href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)"
-        rel="stylesheet">
+    <title>Ana Sayfa | Muhammed Emin ÖNCÜ</title>
+    <!-- Bootstrap CSS (Ödev Şartı) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Özel Tasarımımız -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top mb-5">
+
+    <nav class="custom-navbar" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Muhammed</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <!-- GİRİŞ YAP LİNKİ GÜNCELLENDİ -->
-                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-modern btn-sm"
-                            href="login.html">Giriş Yap</a></li>
+            <div class="navbar-inner">
+                <a class="navbar-brand" href="index.html">ÖNCÜ</a>
+                <button class="navbar-toggler" id="toggler" aria-label="Menüyü aç/kapat">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-nav" id="navMenu">
+                    <li><a class="nav-link active" href="index.html">Hakkında</a></li>
+                    <li><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                    <li><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                    <li><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                    <li><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    <li><a class="btn-nav-login" href="login.html">Giriş Yap</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container fade-in">
-        <div class="modern-card p-5 mb-5">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <span class="badge bg-primary mb-2 px-3 py-2 rounded-pill">Yazılım Geliştirici</span>
-                    <h1 class="display-4 fw-bold text-dark mb-3">Merhaba, Ben Muhammed.</h1>
-                    <p class="lead text-muted mb-4">
-                        Sakarya Üniversitesi'nde eğitimime devam ediyorum. Yazılım mimarileri, otomasyon sistemleri ve
-                        insanlık yararına teknoloji geliştirme üzerine tutkulu bir geliştiriciyim. Karmaşık sorunlara
-                        basit, ölçeklenebilir ve modern çözümler üretmeyi seviyorum.
+    <main class="container fade-in" style="padding-top: 48px; padding-bottom: 48px;">
+
+        <!-- Hero -->
+        <section class="modern-card p-5 mb-4" style="margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 260px;">
+                    <span class="badge-accent" style="margin-bottom: 16px; display: inline-block;">⚡ Yazılım
+                        Geliştirici</span>
+                    <h1 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 16px;">
+                        Merhaba, Ben<br>
+                        <span class="gradient-text">Muhammed Emin ÖNCÜ</span>
+                    </h1>
+                    <p style="font-size: 1.05rem; margin-bottom: 24px;">
+                        Sakarya Üniversitesi'nde eğitimime devam ediyorum. Yazılım mimarileri,
+                        otomasyon sistemleri ve insanlık yararına teknoloji geliştirme üzerine
+                        tutkulu bir geliştiriciyim.
                     </p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="cv.html" class="btn btn-primary btn-sm">Özgeçmişi Gör →</a>
+                        <a href="iletisim.html" class="btn btn-outline btn-sm">İletişime Geç</a>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                    <img src="[https://ui-avatars.com/api/?name=Muhammed&background=0d6efd&color=fff&size=200](https://ui-avatars.com/api/?name=Muhammed&background=0d6efd&color=fff&size=200)"
-                        alt="Profil Resmi" class="rounded-circle shadow-lg img-fluid border border-4 border-white">
+                <div style="text-align: center; flex-shrink: 0;">
+                    <div class="avatar-wrapper">
+                        <img src="https://ui-avatars.com/api/?name=M+E&background=6366f1&color=fff&size=200&bold=true"
+                            alt="Muhammed Emin ÖNCÜ profil resmi">
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Stat Chips -->
+        <div class="stat-grid" style="margin-bottom: 20px;">
+            <div class="stat-chip">
+                <span class="icon">🎓</span>
+                <div><span class="label">Üniversite</span><span class="value">SAÜ</span></div>
+            </div>
+            <div class="stat-chip">
+                <span class="icon">💼</span>
+                <div><span class="label">Bölüm</span><span class="value">Bilg. Müh.</span></div>
+            </div>
+            <div class="stat-chip">
+                <span class="icon">📍</span>
+                <div><span class="label">Şehir</span><span class="value">Hatay</span></div>
+            </div>
+            <div class="stat-chip">
+                <span class="icon">🚀</span>
+                <div><span class="label">Durum</span><span class="value">Aktif</span></div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="modern-card p-4 h-100">
-                    <h3 class="h4 border-bottom pb-3 mb-4">Mottom</h3>
-                    <p class="text-secondary fs-5 fst-italic">
-                        "Teknoloji, sadece bir araç değil; hayatı kolaylaştıran, sorunları çözen ve geleceği inşa eden
-                        bir sanat formudur."
-                    </p>
+        <!-- Motto & İlgi Alanları -->
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <article class="modern-card p-4 h-100">
+                <div class="section-title">Mottom</div>
+                <p class="fst-italic" style="font-size: 1rem; line-height: 1.8;">
+                    "Teknoloji, sadece bir araç değil; hayatı kolaylaştıran, sorunları çözen
+                    ve geleceği inşa eden bir sanat formudur."
+                </p>
+                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">IoT</span>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="modern-card p-4 h-100 bg-primary text-white">
-                    <h3 class="h4 border-bottom border-light pb-3 mb-4 text-white">İlgi Alanlarım</h3>
-                    <ul class="list-unstyled fs-5">
-                        <li class="mb-2">🏋️ Vücut Geliştirme & Fitness</li>
-                        <li class="mb-2">💻 IoT & Sunucu Yönetimi (Linux)</li>
-                        <li class="mb-2">🤖 Otomasyon & Web Botları</li>
-                    </ul>
-                </div>
-            </div>
+            </article>
+        </div>
+
+        <div class="col-lg-6">
+            <article class="modern-card p-4 h-100" style="background: linear-gradient(135deg,rgba(99,102,241,0.12),rgba(139,92,246,0.08)); border-color: rgba(99,102,241,0.25);">
+                <div class="section-title">İlgi Alanlarım</div>
+                <ul style="display: flex; flex-direction: column; gap: 10px;">
+                    <li
+                        style="display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(255,255,255,0.04); border-radius: 10px;">
+                        <span style="font-size: 1.4rem;">🏋️</span>
+                        <div>
+                            <div style="font-weight: 600;">Vücut Geliştirme &amp; Fitness</div>
+                            <div style="font-size: 0.8rem; color: var(--text-3);">Disiplin ve sürekli gelişim</div>
+                        </div>
+                    </li>
+                    <li
+                        style="display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(255,255,255,0.04); border-radius: 10px;">
+                        <span style="font-size: 1.4rem;">💻</span>
+                        <div>
+                            <div style="font-weight: 600;">IoT &amp; Sunucu Yönetimi</div>
+                            <div style="font-size: 0.8rem; color: var(--text-3);">Linux, ESP32, ağ altyapısı</div>
+                        </div>
+                    </li>
+                    <li
+                        style="display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(255,255,255,0.04); border-radius: 10px;">
+                        <span style="font-size: 1.4rem;">🤖</span>
+                        <div>
+                            <div style="font-weight: 600;">Otomasyon &amp; Web Botları</div>
+                            <div style="font-size: 0.8rem; color: var(--text-3);">Scraping, bot geliştirme</div>
+                        </div>
+                    </li>
+                </ul>
+                </article>
         </div>
     </div>
-    <script
-        src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
+
+        <!-- Tanıtım Videosu — Şartname: medya öğeleri (resim, video) -->
+        <section class="modern-card p-4" style="margin-top: 20px;">
+            <div class="section-title">🎬 Tanıtım Videosu</div>
+            <p style="margin-bottom: 16px; font-size: 0.92rem;">Yazılım, otomasyon ve teknoloji alanlarındaki ilgi alanlarımı konu alan seçilmiş bir içerik.</p>
+            <div style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid var(--border);">
+                <iframe
+                    src="https://www.youtube.com/embed/ua-CiDNNj30"
+                    title="Linus Torvalds: The Mind Behind Linux | TED"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; border: none;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-3); text-align: center;">Linus Torvalds: Linux'un Arkasındaki Deha — TED Talk</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">Muhammed Emin ÖNCÜ &copy; 2025 · Web Teknolojileri Projesi</div>
+    </footer>
+
+    <script>
+        // Navbar scroll efekti
+        window.addEventListener('scroll', function () {
+            document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+        });
+        // Hamburger menü
+        document.getElementById('toggler').addEventListener('click', function () {
+            this.classList.toggle('open');
+            document.getElementById('navMenu').classList.toggle('open');
+        });
+    </script>
 </body>
 
 </html>

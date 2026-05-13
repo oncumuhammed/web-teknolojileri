@@ -1,7 +1,7 @@
 <?php
 
-$ogrenci_no = "B251210377"; 
-$beklenen_mail = $ogrenci_no . "@sakarya.edu.tr";
+$ogrenci_no    = "b251210377";
+$beklenen_mail = "b251210377@sakarya.edu.tr";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gelen_email = $_POST['email'] ?? '';
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <body class='d-flex align-items-center justify-content-center' style='min-height: 100vh;'>
             <div class='modern-card p-5 text-center fade-in'>
                 <h1 class='display-5 fw-bold text-success mb-3'>🎉 Başarılı!</h1>
-                <h2 class='h3 text-dark'>Hoşgeldiniz <span class='text-primary'>$ogrenci_no</span></h2>
+                <h2 class='h3' style='color:#6366f1;'>Hoşgeldiniz <span style='color:#10b981;font-weight:900;'>$ogrenci_no</span></h2>
                 <p class='text-muted mt-3'>Sisteme güvenli bir şekilde giriş yaptınız.</p>
                 <a href='index.html' class='btn btn-outline-primary btn-modern mt-4'>Ana Sayfaya Git</a>
             </div>

@@ -1,54 +1,92 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giriş Yap - Web Teknolojileri</title>
+    <title>Giriş | Muhammed Emin ÖNCÜ</title>
+    <!-- Bootstrap CSS (Ödev Şartı) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Özel Tasarımımız -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body class="login-page">
 
-<body class="d-flex align-items-center py-4 bg-light" style="min-height: 100vh;">
+    <div class="login-box fade-in">
 
-    <main class="w-100 m-auto fade-in" style="max-width: 400px;">
-        <div class="modern-card p-5 text-center">
-            <h1 class="h3 mb-4 fw-bold text-dark">Sisteme Giriş</h1>
+        <div class="text-center" style="margin-bottom: 20px;">
+            <a class="navbar-brand" href="index.html" style="font-size: 1.4rem;">M. E. ÖNCÜ</a>
+        </div>
 
-            <!-- Hata mesajı kutusu (PHP'den dönen URL parametresine göre tetiklenir) -->
-            <div id="error-alert" class="alert alert-danger d-none text-start small fw-bold" role="alert"></div>
+        <div class="modern-card p-5">
 
-            <form action="giris.php" method="POST">
-                <div class="form-floating mb-3 text-start">
+            <div class="text-center" style="margin-bottom: 28px;">
+                <div style="width:56px;height:56px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">🔐</div>
+                <h1 style="font-size: 1.4rem;">Sisteme Giriş</h1>
+                <p style="font-size: 0.87rem; color: var(--text-3); margin-top: 4px;">Öğrenci bilgilerinizle devam edin</p>
+            </div>
+
+            <div class="alert alert-danger" id="errorAlert"></div>
+
+            <form action="giris.php" method="POST" id="loginFormu" onsubmit="return validateLogin()">
+                <div class="form-group">
+                    <label for="email" class="form-label">Öğrenci E-posta</label>
                     <input type="email" class="form-control" id="email" name="email"
-                        placeholder="b123456789@sakarya.edu.tr">
-                    <label for="email">Öğrenci E-posta Adresi</label>
+                           placeholder="b251210377@sakarya.edu.tr">
                 </div>
-
-                <div class="form-floating mb-4 text-start">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifre">
-                    <label for="password">Şifre (Öğrenci No)</label>
+                <div class="form-group" style="margin-bottom: 24px;">
+                    <label for="password" class="form-label">Şifre (Öğrenci No)</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                           placeholder="••••••••••">
                 </div>
-
-                <button class="btn btn-primary btn-modern w-100 py-2 mb-3" type="submit">Giriş Yap</button>
-                <a href="index.html" class="text-decoration-none text-secondary small">Ana Sayfaya Dön</a>
+                <button class="btn btn-primary btn-full" type="submit" style="margin-bottom: 14px;">
+                    Giriş Yap →
+                </button>
+                <div class="text-center">
+                    <a href="index.html" style="font-size: 0.85rem; color: var(--text-3); transition: color 0.2s;"
+                       onmouseover="this.style.color='#a5b4fc'"
+                       onmouseout="this.style.color='var(--text-3)'">← Ana Sayfaya Dön</a>
+                </div>
             </form>
         </div>
-    </main>
 
-    <!-- PHP'den gelen hata parametresini yakalayan JS scripti -->
+        <p class="text-center" style="margin-top: 20px; font-size: 0.8rem; color: var(--text-3);">
+            Web Teknolojileri Projesi &copy; 2025
+        </p>
+    </div>
+
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const errorAlert = document.getElementById('error-alert');
+        // ── JavaScript Form Doğrulama (Şartname Zorunluluğu) ──
+        function validateLogin() {
+            var errors     = [];
+            var email      = document.getElementById('email').value.trim();
+            var password   = document.getElementById('password').value.trim();
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@sakarya\.edu\.tr$/;
 
-        if (urlParams.get('error') === 'empty') {
-            errorAlert.textContent = "Kullanıcı adı ve şifre boş bırakılamaz!";
-            errorAlert.classList.remove('d-none');
-        } else if (urlParams.get('error') === 'wrong') {
-            errorAlert.textContent = "Hatalı e-posta veya şifre girdiniz!";
-            errorAlert.classList.remove('d-none');
+            if (!email)                      errors.push('E-posta alanı boş bırakılamaz.');
+            else if (!emailRegex.test(email)) errors.push('Geçerli bir @sakarya.edu.tr e-posta adresi giriniz.');
+            if (!password)                   errors.push('Şifre alanı boş bırakılamaz.');
+
+            var box = document.getElementById('errorAlert');
+            if (errors.length > 0) {
+                box.innerHTML = '⚠️ ' + errors.join('<br>⚠️ ');
+                box.classList.add('show');
+                return false; // Form gönderimini engelle
+            }
+            box.classList.remove('show');
+            return true; // PHP'ye gönder
+        }
+
+        // PHP'den dönen hata parametresini oku
+        var params = new URLSearchParams(window.location.search);
+        var box    = document.getElementById('errorAlert');
+
+        if (params.get('error') === 'empty') {
+            box.textContent = '⚠️ Kullanıcı adı ve şifre boş bırakılamaz!';
+            box.classList.add('show');
+        } else if (params.get('error') === 'wrong') {
+            box.textContent = '❌ Hatalı e-posta veya şifre girdiniz!';
+            box.classList.add('show');
         }
     </script>
 </body>
-
 </html>

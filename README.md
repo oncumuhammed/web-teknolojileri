@@ -9,8 +9,8 @@ Bu proje, Sakarya Üniversitesi Bilgisayar Mühendisliği Web Teknolojileri ders
 - **Bölüm:** Bilgisayar Mühendisliği
 
 ## 🔗 Proje Bağlantıları
-- **GitHub Reposu:** (https://github.com/oncumuhammed/web-teknolojileri)
-- **Canlı Site Linki (http://oncumuhammed.great-site.net)
+- **GitHub Reposu:** ([https://github.com/oncumuhammed/web-teknolojileri])
+- **Canlı Site Linki ([http://oncumuhammed.great-site.net])
 
 ## 🚀 Kullanılan Teknolojiler
 - **Frontend:** HTML5 (Semantik yapılar), CSS3 (Modern UI, Harici Stil Dosyası)
@@ -41,7 +41,7 @@ Tüm form elemanlarını (text, radio, checkbox, select, textarea) içeren ileti
 *Ekran görüntüsü buraya eklenecek.*
 
 ### 6. Login (`login.html` ve `giris.php`)
-Öğrenci numarası ve e-postası (b2412100001@sakarya.edu.tr / b2412100001) ile güvenli giriş yapılabilen sistem. Hatalı durumlarda JavaScript ile aynı sayfada uyarı verilirken, başarılı girişte PHP üzerinden özel "Hoşgeldiniz b2412100001" sayfasına yönlendirilir.
+Öğrenci numarası ve e-postası (emin.oncu@ogr.sakarya.edu.tr / B251210377) ile güvenli giriş yapılabilen sistem. Hatalı durumlarda JavaScript ile aynı sayfada uyarı verilirken, başarılı girişte PHP üzerinden özel "Hoşgeldiniz" sayfasına yönlendirilir.
 *Ekran görüntüsü buraya eklenecek.*
 
 ## 🛠️ Kurulum ve Çalıştırma (Yerel Test İçin)

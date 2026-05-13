@@ -1,93 +1,141 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlgi Alanlarım - Web Teknolojileri</title>
-    <link
-        href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)"
-        rel="stylesheet">
+    <title>İlgi Alanlarım | Muhammed Emin ÖNCÜ</title>
+    <!-- Bootstrap CSS (Ödev Şartı) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Özel Tasarımımız -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .show-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .show-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--r-md); overflow: hidden;
+            display: flex; flex-direction: column; transition: var(--ease);
+        }
+        .show-card:hover { transform: translateY(-6px); border-color: var(--border-a); box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 20px var(--accent-glow); }
+        .show-card img  { width: 100%; height: 280px; object-fit: cover; }
+        .show-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+        .show-title     { font-size: 0.92rem; font-weight: 700; margin-bottom: 8px; }
+        .genre-badge    { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; background: rgba(99,102,241,0.12); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.25); margin: 2px; }
+        .show-link      { display: block; text-align: center; margin-top: auto; padding-top: 12px; }
+        @media (max-width: 992px) { .show-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 576px) { .show-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top mb-5">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Muhammed</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+<nav class="custom-navbar" id="mainNav">
+    <div class="container">
+        <div class="navbar-inner">
+            <a class="navbar-brand" href="index.html">M. E. ÖNCÜ</a>
+            <button class="navbar-toggler" id="toggler" aria-label="Menüyü aç/kapat">
+                <span></span><span></span><span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <!-- GİRİŞ YAP LİNKİ GÜNCELLENDİ -->
-                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-modern btn-sm"
-                            href="login.html">Giriş Yap</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav" id="navMenu">
+                <li><a class="nav-link" href="index.html">Hakkında</a></li>
+                <li><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                <li><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                <li><a class="nav-link active" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                <li><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                <li><a class="btn-nav-login" href="login.html">Giriş Yap</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="container fade-in">
-        <div class="text-center mb-5">
-            <h1 class="display-5 fw-bold text-dark">İlgi Alanlarım</h1>
-            <p class="lead text-secondary">Teknoloji, Yazılım ve Siber Dünyayı Konu Alan Yapımlar</p>
-            <span class="badge bg-dark px-3 py-2 rounded-pill mt-2">📡 TVMaze API Entegrasyonu</span>
-        </div>
+<main class="container fade-in" style="padding-top: 48px; padding-bottom: 48px;">
 
-        <div class="row" id="api-results">
-            <div class="col-12 text-center py-5" id="loading-spinner">
-                <div class="spinner-border text-primary" role="status"></div>
-                <p class="mt-3 text-secondary fw-bold">Veriler API'den güvenli bir şekilde çekiliyor...</p>
-            </div>
-        </div>
-    </main>
+    <header class="text-center" style="margin-bottom: 40px;">
+        <span class="badge-accent" style="margin-bottom: 12px; display: inline-block;">📡 TVMaze API</span>
+        <h1 style="font-size: 2.5rem;"><span class="gradient-text">İlgi Alanlarım</span></h1>
+        <p>Hackerlar, Siber Güvenlik, Dövüş Sanatları ve Disiplini Konu Alan Efsaneler</p>
+        <hr class="gradient-divider">
+    </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const resultsContainer = document.getElementById('api-results');
-            fetch('[https://api.tvmaze.com/search/shows?q=cyber](https://api.tvmaze.com/search/shows?q=cyber)')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('loading-spinner').style.display = 'none';
-                    data.forEach(item => {
-                        const show = item.show;
-                        const imageUrl = show.image ? show.image.medium : '[https://via.placeholder.com/210x295?text=Resim+Yok](https://via.placeholder.com/210x295?text=Resim+Yok)';
-                        const cardHTML = `
-                            <div class="col-md-4 col-lg-3 mb-4">
-                                <div class="modern-card h-100 d-flex flex-column">
-                                    <img src="${imageUrl}" class="card-img-top border-bottom" alt="${show.name}" style="height: 350px; object-fit: cover;">
-                                    <div class="card-body d-flex flex-column p-4">
-                                        <h5 class="card-title fw-bold text-dark mb-1">${show.name}</h5>
-                                        <p class="card-text small text-secondary mb-4">
-                                            <span class="badge bg-light text-dark border mt-2">${show.genres.join(', ') || 'Tür Belirtilmemiş'}</span>
-                                        </p>
-                                        <a href="${show.url}" target="_blank" class="btn btn-primary btn-modern mt-auto w-100">Detayları Gör</a>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        resultsContainer.innerHTML += cardHTML;
-                    });
-                })
-                .catch(error => {
-                    document.getElementById('loading-spinner').innerHTML = `
-                        <div class="alert alert-danger modern-card p-4" role="alert">
-                            <h4 class="alert-heading fw-bold">Bağlantı Hatası!</h4>
-                            <p>API sunucularına ulaşılamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.</p>
-                        </div>
-                    `;
-                    console.error("API Hatası:", error);
+    <!-- Yükleniyor -->
+    <div id="loadingBox" class="text-center" style="padding: 60px 0;">
+        <div class="spinner"></div>
+        <p style="margin-top: 20px; font-weight: 600;">Veriler API'den çekiliyor...</p>
+    </div>
+
+    <!-- İçerik Sonuçları -->
+    <div class="show-grid" id="showGrid" style="display: none;"></div>
+
+    <!-- Hata -->
+    <div class="alert alert-danger" id="errorBox" style="display: none;">
+        <strong>⚠️ Bağlantı Hatası</strong><br>
+        API sunucularına ulaşılamadı. İnternet bağlantınızı kontrol edip sayfayı yenileyin.
+    </div>
+
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">Muhammed Emin ÖNCÜ &copy; 2025 · Web Teknolojileri Projesi</div>
+</footer>
+
+<script>
+    // Navbar
+    window.addEventListener('scroll', function () {
+        document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    document.getElementById('toggler').addEventListener('click', function () {
+        this.classList.toggle('open');
+        document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    // TVMaze API Entegrasyonu (Promise.all ile)
+    document.addEventListener('DOMContentLoaded', function () {
+        var loading  = document.getElementById('loadingBox');
+        var grid     = document.getElementById('showGrid');
+        var errorBox = document.getElementById('errorBox');
+
+        // TVMaze ücretsiz API'sinden spesifik dizileri çekiyoruz
+        var queries = ['baki', 'cobra kai', 'warrior', 'mr robot', 'scorpion', 'person of interest'];
+        
+        var fetchPromises = queries.map(function(query) {
+            return fetch('https://api.tvmaze.com/singlesearch/shows?q=' + encodeURIComponent(query))
+                .then(function(response) {
+                    if (!response.ok) { throw new Error('HTTP ' + response.status); }
+                    return response.json();
                 });
         });
-    </script>
-    <script
-        src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
-</body>
 
+        Promise.all(fetchPromises)
+            .then(function(dataArray) {
+                loading.style.display = 'none';
+                grid.style.display    = 'grid';
+
+                dataArray.forEach(function (show) {
+                    if (!show) return; // API'den boş dönerse atla
+
+                    var imgSrc   = show.image ? show.image.medium : 'https://via.placeholder.com/210x295/1a1b2e/6366f1?text=No+Image';
+                    var genres   = show.genres && show.genres.length
+                        ? show.genres.map(function (g) { return '<span class="genre-badge">' + g + '</span>'; }).join('')
+                        : '<span class="genre-badge">Belirtilmemiş</span>';
+
+                    var card = document.createElement('article');
+                    card.className = 'show-card';
+                    card.innerHTML =
+                        '<img src="' + imgSrc + '" alt="' + show.name + '" loading="lazy">' +
+                        '<div class="show-card-body">' +
+                            '<h2 class="show-title">' + show.name + '</h2>' +
+                            '<div style="margin-bottom: 12px;">' + genres + '</div>' +
+                            '<a href="' + show.url + '" target="_blank" rel="noopener" class="btn btn-primary btn-sm show-link">Detayları Gör →</a>' +
+                        '</div>';
+                    grid.appendChild(card);
+                });
+            })
+            .catch(function(err) {
+                loading.style.display = 'none';
+                errorBox.style.display = 'block';
+                errorBox.classList.add('show');
+                console.error('API Hatası:', err);
+            });
+    });
+</script>
+</body>
 </html>

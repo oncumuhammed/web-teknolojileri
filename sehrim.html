@@ -1,136 +1,173 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şehrim - Hatay</title>
-    <link
-        href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)"
-        rel="stylesheet">
+    <title>Şehrim | Muhammed Emin ÖNCÜ</title>
+    <!-- Bootstrap CSS (Ödev Şartı) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Özel Tasarımımız -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top mb-5">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Muhammed</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+<nav class="custom-navbar" id="mainNav">
+    <div class="container">
+        <div class="navbar-inner">
+            <a class="navbar-brand" href="index.html">M. E. ÖNCÜ</a>
+            <button class="navbar-toggler" id="toggler" aria-label="Menüyü aç/kapat">
+                <span></span><span></span><span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <!-- GİRİŞ YAP LİNKİ GÜNCELLENDİ -->
-                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-modern btn-sm"
-                            href="login.html">Giriş Yap</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav" id="navMenu">
+                <li><a class="nav-link" href="index.html">Hakkında</a></li>
+                <li><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                <li><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+                <li><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                <li><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                <li><a class="btn-nav-login" href="login.html">Giriş Yap</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="container fade-in">
-        <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-dark">HATAY</h1>
-            <p class="lead text-secondary">Medeniyetler ve Hoşgörü Beşiği</p>
-        </div>
+<main class="container fade-in" style="padding-top: 48px; padding-bottom: 48px;">
 
-        <section class="mb-5">
-            <div id="sehirSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="2"></button>
-                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="[https://picsum.photos/seed/hatay1/1200/600](https://picsum.photos/seed/hatay1/1200/600)"
-                            class="d-block w-100" alt="Antakya Tarihi Sokakları">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3 class="fw-bold">Tarihi Antakya Sokakları</h3>
-                            <p class="fs-5">Taş evleri ve dar sokaklarıyla tarihe yolculuk.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="[https://picsum.photos/seed/hatay2/1200/600](https://picsum.photos/seed/hatay2/1200/600)"
-                            class="d-block w-100" alt="Titus Tüneli">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3 class="fw-bold">Titus Tüneli</h3>
-                            <p class="fs-5">Roma döneminden kalma devasa mühendislik harikası.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="[https://picsum.photos/seed/hatay3/1200/600](https://picsum.photos/seed/hatay3/1200/600)"
-                            class="d-block w-100" alt="Harbiye Şelaleleri">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3 class="fw-bold">Harbiye Şelaleleri</h3>
-                            <p class="fs-5">Mitolojik hikayelere konu olmuş doğa harikası.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="[https://picsum.photos/seed/hatay4/1200/600](https://picsum.photos/seed/hatay4/1200/600)"
-                            class="d-block w-100" alt="Hatay Arkeoloji Müzesi">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3 class="fw-bold">Hatay Arkeoloji Müzesi</h3>
-                            <p class="fs-5">Dünyanın en büyük mozaik müzelerinden biri.</p>
-                        </div>
+    <header class="text-center" style="margin-bottom: 40px;">
+        <span class="badge-accent" style="margin-bottom: 12px; display: inline-block;">📍 Memleket</span>
+        <h1 style="font-size: 2.8rem;"><span class="gradient-text">HATAY</span></h1>
+        <p>Medeniyetler ve Hoşgörü Beşiği</p>
+        <hr class="gradient-divider">
+    </header>
+
+    <!-- Carousel -->
+    <section style="margin-bottom: 40px;">
+        <div class="carousel-wrapper" id="carousel">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <img src="https://picsum.photos/seed/hatay1/1200/600" alt="Antakya Tarihi Sokakları">
+                    <div class="carousel-caption">
+                        <h3>Tarihi Antakya Sokakları</h3>
+                        <p>Taş evleri ve dar sokaklarıyla tarihe yolculuk.</p>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Önceki</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Sonraki</span>
-                </button>
-            </div>
-        </section>
-
-        <div class="row mb-5">
-            <div class="col-md-5 mb-4">
-                <article class="modern-card p-4 h-100">
-                    <h2 class="h4 border-bottom pb-3 mb-4 text-primary">Şehir Hakkında</h2>
-                    <div class="d-flex justify-content-between border-bottom py-2">
-                        <span class="text-muted fw-bold">Nüfus</span>
-                        <span class="text-dark">1.6 Milyon</span>
+                <div class="carousel-slide">
+                    <img src="https://picsum.photos/seed/hatay2/1200/600" alt="Titus Tüneli">
+                    <div class="carousel-caption">
+                        <h3>Titus Tüneli</h3>
+                        <p>Roma döneminden kalma devasa mühendislik harikası.</p>
                     </div>
-                    <div class="d-flex justify-content-between border-bottom py-2">
-                        <span class="text-muted fw-bold">Bölge</span>
-                        <span class="text-dark">Akdeniz Bölgesi</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://picsum.photos/seed/hatay3/1200/600" alt="Harbiye Şelaleleri">
+                    <div class="carousel-caption">
+                        <h3>Harbiye Şelaleleri</h3>
+                        <p>Mitolojik hikayelere konu olmuş doğa harikası.</p>
                     </div>
-                    <div class="d-flex justify-content-between border-bottom py-2 mb-4">
-                        <span class="text-muted fw-bold">Plaka Kodu</span>
-                        <span class="text-dark">31</span>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://picsum.photos/seed/hatay4/1200/600" alt="Hatay Arkeoloji Müzesi">
+                    <div class="carousel-caption">
+                        <h3>Hatay Arkeoloji Müzesi</h3>
+                        <p>Dünyanın en büyük mozaik müzelerinden biri.</p>
                     </div>
-                    <h4 class="h6 fw-bold mt-4 text-dark">Gezilecek Önemli Yerler</h4>
-                    <p class="text-secondary text-sm">Hatay Arkeoloji Müzesi, Titus Tüneli, Beşikli Mağara, Harbiye
-                        Şelaleleri, Uzun Çarşı, St. Pierre Kilisesi.</p>
-                </article>
+                </div>
             </div>
-
-            <div class="col-md-7 mb-4">
-                <article class="modern-card p-4 h-100">
-                    <h2 class="h4 border-bottom pb-3 mb-3 text-primary">Kültürel Mirasımız</h2>
-                    <h3 class="h5 fw-bold text-dark">Habib-i Neccar Camii</h3>
-                    <img src="[https://picsum.photos/seed/habibineccar/800/350](https://picsum.photos/seed/habibineccar/800/350)"
-                        class="img-fluid rounded-4 mb-4 mt-2" alt="Habib-i Neccar Camii">
-                    <p class="text-secondary">
-                        Antakya'da bulunan ve Anadolu sınırları içerisinde inşa edilen ilk cami olarak kabul edilen
-                        tarihi yapıdır. Farklı inançlara sahip insanların yüzyıllardır bir arada yaşadığı Hatay'da,
-                        hoşgörü ve kardeşliğin en önemli sembollerinden biridir.
-                    </p>
-                </article>
-            </div>
+            <button class="carousel-btn prev" id="prevBtn" aria-label="Önceki">&#8592;</button>
+            <button class="carousel-btn next" id="nextBtn" aria-label="Sonraki">&#8594;</button>
+            <div class="carousel-dots" id="carouselDots"></div>
         </div>
-    </main>
-    <script
-        src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
+    </section>
+
+    <!-- Info Cards -->
+    <div class="grid-sehir">
+
+        <article class="modern-card p-4">
+            <div class="section-title">Şehir Bilgileri</div>
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border);">
+                <span style="color: var(--text-3); font-weight: 500; font-size: 0.9rem;">🏙️ Nüfus</span>
+                <span style="font-weight: 700;">1.6 Milyon</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border);">
+                <span style="color: var(--text-3); font-weight: 500; font-size: 0.9rem;">🌊 Bölge</span>
+                <span style="font-weight: 700;">Akdeniz</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border);">
+                <span style="color: var(--text-3); font-weight: 500; font-size: 0.9rem;">🚗 Plaka</span>
+                <span style="font-weight: 700;">31</span>
+            </div>
+            <div style="margin-top: 20px;">
+                <p style="font-size: 0.75rem; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Gezilecek Yerler</p>
+                <span class="skill-tag">Arkeoloji Müzesi</span>
+                <span class="skill-tag">Titus Tüneli</span>
+                <span class="skill-tag">Harbiye</span>
+                <span class="skill-tag">Uzun Çarşı</span>
+                <span class="skill-tag">St. Pierre</span>
+                <span class="skill-tag">Beşikli Mağara</span>
+            </div>
+        </article>
+
+        <article class="modern-card p-4">
+            <div class="section-title">Kültürel Mirasımız</div>
+            <h2 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 14px;">Habib-i Neccar Camii</h2>
+            <img src="https://picsum.photos/seed/habibineccar/800/350"
+                 alt="Habib-i Neccar Camii"
+                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;">
+            <p>
+                Antakya'da bulunan ve Anadolu sınırları içerisinde inşa edilen ilk cami olarak
+                kabul edilen tarihi yapıdır. Farklı inançlara sahip insanların yüzyıllardır bir
+                arada yaşadığı Hatay'da, hoşgörü ve kardeşliğin en önemli sembollerinden biridir.
+            </p>
+        </article>
+
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">Muhammed Emin ÖNCÜ &copy; 2025 · Web Teknolojileri Projesi</div>
+</footer>
+
+<script>
+    // Navbar
+    window.addEventListener('scroll', function () {
+        document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    document.getElementById('toggler').addEventListener('click', function () {
+        this.classList.toggle('open');
+        document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    // Vanilla JS Carousel
+    (function () {
+        const track  = document.getElementById('carouselTrack');
+        const slides = track.querySelectorAll('.carousel-slide');
+        const dotsEl = document.getElementById('carouselDots');
+        let current  = 0;
+        const total  = slides.length;
+
+        // Dot'ları oluştur
+        slides.forEach(function (_, i) {
+            var dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', (i + 1) + '. slayt');
+            dot.addEventListener('click', function () { goTo(i); });
+            dotsEl.appendChild(dot);
+        });
+
+        function goTo(index) {
+            current = (index + total) % total;
+            track.style.transform = 'translateX(-' + (current * 100) + '%)';
+            dotsEl.querySelectorAll('.carousel-dot').forEach(function (d, i) {
+                d.classList.toggle('active', i === current);
+            });
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', function () { goTo(current - 1); });
+        document.getElementById('nextBtn').addEventListener('click', function () { goTo(current + 1); });
+
+        // Otomatik geçiş
+        setInterval(function () { goTo(current + 1); }, 4000);
+    })();
+</script>
 </body>
-
 </html>
