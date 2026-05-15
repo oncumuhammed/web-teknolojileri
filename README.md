@@ -9,8 +9,8 @@ Bu proje, Sakarya Üniversitesi Bilgisayar Mühendisliği Web Teknolojileri ders
 - **Bölüm:** Bilgisayar Mühendisliği
 
 ## 🔗 Proje Bağlantıları
-- **GitHub Reposu:** ([https://github.com/oncumuhammed/web-teknolojileri])
-- **Canlı Site Linki ([http://oncumuhammed.great-site.net])
+- **GitHub Reposu:** [https://github.com/oncumuhammed/web-teknolojileri](https://github.com/oncumuhammed/web-teknolojileri)
+- **Canlı Site:** [https://oncumuhammed.liveblog365.com/](https://oncumuhammed.liveblog365.com/)
 
 ## 🚀 Kullanılan Teknolojiler
 - **Frontend:** HTML5 (Semantik yapılar), CSS3 (Modern UI, Harici Stil Dosyası)
@@ -28,20 +28,28 @@ Kişisel tanıtım, motto ve ilgi alanlarının (Vücut geliştirme, IoT, Otomas
 Eğitim bilgilerinin ve geliştirilen yazılım/otomasyon projelerinin sergilendiği, Semantic Tag (header, section, article vb.) standartlarına uygun özgeçmiş sayfası.
 *Ekran görüntüsü buraya eklenecek.*
 
-### 3. Şehrim Sayfası (`sehir.html`)
-Hatay'ın tarihi yerlerinin (Titus Tüneli, Harbiye Şelalesi vb.) yer aldığı 4 resimli tıklanabilir Bootstrap Slider ve kültürel mirasımız olan Habib-i Neccar Camii'nin detaylı tanıtımı.
+### 3. Şehrim Sayfası (`sehrim.html`)
+Hatay'n tarihi yerlerinin (Titus Tüneli, Harbiye Şelalesi, Habib-i Neccar Camii vb.) yer aldığı 6 resimli tıklanabilir Slider ve kültürel mirasımızın detaylı tanıtımı.
 *Ekran görüntüsü buraya eklenecek.*
 
-### 4. İlgi Alanlarım (`ilgi-alanlarim.html`)
+### 4. Mirasımız (`miras.html`)
+Hatay'ın en önemli kültürel mirası olan Habib-i Neccar Camii'ni detaylıca ele alan sayfa. Tarihçe, mimari özellikler, hoşgörü mirası ve çeşitli HTML elemanları (figure, figcaption, article, aside, dl/dt/dd, blockquote, section) kullanılmıştır.
+*Ekran görüntüsü buraya eklenecek.*
+
+### 5. Takımımız (`takim.html`)
+Hatay'ın spor takımı Atakaş Hatayspor'un detaylı tanıtım sayfası. Kulüp kimliği, tarihçe, Süper Lig yolculuğu, başarılar, stadyum bilgileri ve sezon tablosu HTML elemanlarıyla (table, dl, aside, article, blockquote) detaylandırılmıştır.
+*Ekran görüntüsü buraya eklenecek.*
+
+### 6. İlgi Alanlarım (`ilgi-alanlarim.html`)
 TVMaze API üzerinden "cyber" (siber/teknoloji) temalı dizi verilerinin JavaScript Fetch API ile asenkron olarak çekilip Bootstrap kartları ile listelendiği sayfa. Döviz veya hava durumu API'si kullanılmamıştır.
 *Ekran görüntüsü buraya eklenecek.*
 
-### 5. İletişim (`iletisim.html` ve `islem.php`)
+### 7. İletişim (`iletisim.html` ve `islem.php`)
 Tüm form elemanlarını (text, radio, checkbox, select, textarea) içeren iletişim sayfası. Form verileri hem Native JavaScript hem de Vue.js ile iki farklı butonda denetlenmektedir (boşluk, e-mail formatı, sadece rakam kontrolü vb.). Doğrulanan veriler `islem.php` sayfasında ekrana yazdırılmaktadır.
 *Ekran görüntüsü buraya eklenecek.*
 
-### 6. Login (`login.html` ve `giris.php`)
-Öğrenci numarası ve e-postası (emin.oncu@ogr.sakarya.edu.tr / B251210377) ile güvenli giriş yapılabilen sistem. Hatalı durumlarda JavaScript ile aynı sayfada uyarı verilirken, başarılı girişte PHP üzerinden özel "Hoşgeldiniz" sayfasına yönlendirilir.
+### 8. Login (`login.html` ve `giris.php`)
+Öğrenci numarası (`b251210377`) ve e-postası (`b251210377@sakarya.edu.tr`) ile güvenli giriş yapılabilen sistem. Hatalı durumlarda JavaScript ile aynı sayfada uyarı verilirken, başarılı girişte PHP üzerinden "Hoşgeldiniz b251210377" mesajı gösterilir.
 *Ekran görüntüsü buraya eklenecek.*
 
 ## 🛠️ Kurulum ve Çalıştırma (Yerel Test İçin)

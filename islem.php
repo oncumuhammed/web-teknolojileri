@@ -18,6 +18,7 @@
                 $konu     = htmlspecialchars($_POST['konu']     ?? 'Belirtilmedi');
                 $cinsiyet = htmlspecialchars($_POST['cinsiyet'] ?? 'Belirtilmedi');
                 $mesaj    = htmlspecialchars($_POST['mesaj']    ?? 'Belirtilmedi');
+                $onay     = isset($_POST['onay']) ? 'Evet, onaylandı' : 'Hayır, onaylanmadı';
 
                 echo '<div style="text-align:center;margin-bottom:28px;">
                     <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 14px;">✅</div>
@@ -31,12 +32,13 @@
                 echo '<tbody>';
 
                 $rows = [
-                    ['👤 Ad Soyad', $ad],
-                    ['📧 E-posta',  $email],
-                    ['📞 Telefon',  $telefon],
-                    ['📌 Konu',     $konu],
-                    ['🧑 Cinsiyet', $cinsiyet],
-                    ['💬 Mesaj',    $mesaj],
+                    ['👤 Ad Soyad',   $ad],
+                    ['📧 E-posta',    $email],
+                    ['📞 Telefon',    $telefon],
+                    ['📌 Konu',       $konu],
+                    ['🧑 Cinsiyet',   $cinsiyet],
+                    ['💬 Mesaj',      $mesaj],
+                    ['✅ Onay',       $onay],
                 ];
                 foreach ($rows as $row) {
                     echo '<tr>

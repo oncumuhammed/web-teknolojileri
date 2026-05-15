@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class='modern-card p-5 text-center fade-in'>
                 <h1 class='display-5 fw-bold text-success mb-3'>🎉 Başarılı!</h1>
                 <h2 class='h3' style='color:#6366f1;'>Hoşgeldiniz <span style='color:#10b981;font-weight:900;'>$ogrenci_no</span></h2>
-                <p class='text-muted mt-3'>Sisteme güvenli bir şekilde giriş yaptınız.</p>
+                <p style='color:#94a3b8;margin-top:12px;'>Sisteme güvenli bir şekilde giriş yaptınız.</p>
                 <a href='index.html' class='btn btn-outline-primary btn-modern mt-4'>Ana Sayfaya Git</a>
             </div>
         </body>

@@ -14,7 +14,7 @@
 <nav class="custom-navbar" id="mainNav">
     <div class="container">
         <div class="navbar-inner">
-            <a class="navbar-brand" href="index.html">M. E. ÖNCÜ</a>
+            <a class="navbar-brand" href="index.html">ÖNCÜ</a>
             <button class="navbar-toggler" id="toggler" aria-label="Menüyü aç/kapat">
                 <span></span><span></span><span></span>
             </button>
@@ -22,6 +22,8 @@
                 <li><a class="nav-link" href="index.html">Hakkında</a></li>
                 <li><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
                 <li><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                <li><a class="nav-link" href="miras.html">Mirasımız</a></li>
+                <li><a class="nav-link" href="takim.html">Takımımız</a></li>
                 <li><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
                 <li><a class="nav-link" href="iletisim.html">İletişim</a></li>
                 <li><a class="btn-nav-login" href="login.html">Giriş Yap</a></li>
@@ -41,8 +43,8 @@
 
     <div class="grid-cv">
 
-        <!-- Sol Sütun -->
-        <div style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- Sol Sütun (aside: destekleyici bilgiler) -->
+        <aside style="display: flex; flex-direction: column; gap: 20px;">
 
             <section class="modern-card p-4">
                 <div class="section-title">Eğitim</div>
@@ -63,28 +65,42 @@
 
             <section class="modern-card p-4">
                 <div class="section-title">Yetenekler</div>
-                <div>
+                <p style="font-size: 0.75rem; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Yapay Zeka & Veri</p>
+                <div style="margin-bottom: 14px;">
                     <span class="skill-tag">Python</span>
-                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">NLP</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Web & Mobil</p>
+                <div style="margin-bottom: 14px;">
                     <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Kotlin</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Sistem & Otomasyon</p>
+                <div>
                     <span class="skill-tag">Linux</span>
                     <span class="skill-tag">Bash</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">ESP32</span>
+                    <span class="skill-tag">n8n</span>
+                    <span class="skill-tag">Docker</span>
                     <span class="skill-tag">IoT</span>
-                    <span class="skill-tag">Git</span>
                 </div>
             </section>
 
-        </div>
+        </aside>
 
-        <!-- Sağ Sütun -->
+        <!-- Sağ Sütun (section: ana projeler içeriği) -->
         <section class="modern-card p-5">
             <div class="section-title">Yazılım &amp; Otomasyon Projeleri</div>
             <div class="grid-2" style="gap: 14px;">
 
                 <article class="project-card" style="padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; transition: var(--ease);"
-                    onmouseenter="this.style.borderColor='var(--border-a)';this.style.background='rgba(99,102,241,0.06)'"
+                    onmouseenter="this.style.borderColor='var(--border-a)';this.style.background='rgba(56,189,248,0.06)'"
                     onmouseleave="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.03)'">
                     <div style="font-size: 1.8rem; margin-bottom: 10px;">💻</div>
                     <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;">Sunucu Yönetim Otomasyonu</h3>
@@ -92,7 +108,7 @@
                 </article>
 
                 <article style="padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; transition: var(--ease);"
-                    onmouseenter="this.style.borderColor='var(--border-a)';this.style.background='rgba(99,102,241,0.06)'"
+                    onmouseenter="this.style.borderColor='var(--border-a)';this.style.background='rgba(56,189,248,0.06)'"
                     onmouseleave="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.03)'">
                     <div style="font-size: 1.8rem; margin-bottom: 10px;">🕷️</div>
                     <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;">Web Scraper (Veri Madenciliği)</h3>
@@ -100,25 +116,17 @@
                 </article>
 
                 <article style="padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; transition: var(--ease);"
-                    onmouseenter="this.style.borderColor='var(--border-a)';this.style.background='rgba(99,102,241,0.06)'"
+                    onmouseenter="this.style.borderColor='var(--border-a)';this.style.background='rgba(56,189,248,0.06)'"
                     onmouseleave="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.03)'">
-                    <div style="font-size: 1.8rem; margin-bottom: 10px;">🔌</div>
-                    <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;">IoT Akıllı Röle Sistemi</h3>
-                    <p style="font-size: 0.82rem;">ESP8266/ESP32 kullanılarak donanımların uzaktan, web arayüzü üzerinden kontrol edilmesini sağlayan altyapı.</p>
+                    <div style="font-size: 1.8rem; margin-bottom: 10px;">⚡</div>
+                    <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;">n8n İş Akışı Otomasyonları</h3>
+                    <p style="font-size: 0.82rem;">n8n platformu ile otomatik e-posta gönderimi, yapay zeka asistan entegrasyonu ve iş süreçlerini yöneten otomasyon iş akışları.</p>
                 </article>
 
-                <article style="padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; transition: var(--ease);"
-                    onmouseenter="this.style.borderColor='var(--border-a)';this.style.background='rgba(99,102,241,0.06)'"
-                    onmouseleave="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.03)'">
-                    <div style="font-size: 1.8rem; margin-bottom: 10px;">🤖</div>
-                    <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;">Asistan ve Bildirim Botu</h3>
-                    <p style="font-size: 0.82rem;">API entegrasyonları ile sunucu içi bildirimleri, otomatik mesajlamayı ve periyodik görevleri yöneten asistan yazılımı.</p>
-                </article>
-
-                <article style="padding: 20px; grid-column: 1 / -1; background: linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.06)); border: 1px solid rgba(99,102,241,0.25); border-radius: 12px;">
-                    <div style="font-size: 1.8rem; margin-bottom: 10px;">📦</div>
-                    <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;">Stok ve Süreç Takip Scripti</h3>
-                    <p style="font-size: 0.82rem;">PHP ve MySQL kullanılarak geliştirilmiş, envanter giriş-çıkış süreçlerini otomatize eden CRUD tabanlı özel web uygulaması.</p>
+                <article style="padding: 20px; grid-column: 1 / -1; background: linear-gradient(135deg,rgba(56,189,248,0.08),rgba(129,140,248,0.05)); border: 1px solid rgba(56,189,248,0.25); border-radius: 12px;">
+                    <div style="font-size: 1.8rem; margin-bottom: 10px;">📱</div>
+                    <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 6px;">Mobil Uygulama Geliştirme</h3>
+                    <p style="font-size: 0.82rem;">Kotlin ve Android platformu üzerinde çeşitli mobil uygulamalar geliştirme deneyimi; kullanıcı arayüzü tasarımı ve API entegrasyonu.</p>
                 </article>
 
             </div>

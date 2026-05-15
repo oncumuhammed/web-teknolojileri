@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Raporu — Web Teknolojileri</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            background: #fff;
+        }
+
+        /* Kapak Sayfası */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 40px;
+            page-break-after: always;
+            border-bottom: 4px solid #38bdf8;
+        }
+        .cover .uni-logo {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+        .cover h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .cover h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #38bdf8;
+            margin-bottom: 40px;
+        }
+        .cover .info-table {
+            text-align: left;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        .cover .info-table td {
+            padding: 8px 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .cover .info-table td:first-child {
+            font-weight: 700;
+            color: #475569;
+            white-space: nowrap;
+        }
+        .cover .info-table a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .cover .date {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* İçerik Sayfaları */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        .page-section {
+            page-break-inside: avoid;
+            margin-bottom: 50px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .page-section .section-header {
+            background: #f8fafc;
+            padding: 16px 24px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .page-section .section-header h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .page-section .section-header .file-name {
+            font-size: 0.82rem;
+            color: #64748b;
+            font-family: monospace;
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+        .page-section .section-body {
+            padding: 20px 24px;
+        }
+        .page-section .section-body p {
+            font-size: 0.92rem;
+            color: #475569;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        .page-section .section-body img {
+            width: 100%;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            display: block;
+        }
+        .page-section .section-body .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+        .page-section .section-body .tech-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: #f0f9ff;
+            color: #0284c7;
+            border: 1px solid #bae6fd;
+        }
+
+        .report-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        .report-subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+        }
+
+        @media print {
+            .page-section { break-inside: avoid; }
+            .cover { break-after: page; }
+            body { font-size: 11pt; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==============================
+     KAPAK SAYFASI
+     ============================== -->
+<div class="cover">
+    <div class="uni-logo">🎓</div>
+    <h1>WEB TEKNOLOJİLERİ DERSİ<br>PROJE ÖDEVİ RAPORU</h1>
+    <h2>2025–2026 Bahar Dönemi</h2>
+
+    <table class="info-table">
+        <tr>
+            <td>📚 Ders:</td>
+            <td>Web Teknolojileri</td>
+        </tr>
+        <tr>
+            <td>👤 Ad Soyad:</td>
+            <td>Muhammed Emin ÖNCÜ</td>
+        </tr>
+        <tr>
+            <td>🔢 Öğrenci No:</td>
+            <td>B251210377</td>
+        </tr>
+        <tr>
+            <td>🏫 Bölüm:</td>
+            <td>Bilgisayar Mühendisliği</td>
+        </tr>
+        <tr>
+            <td>🔗 GitHub:</td>
+            <td><a href="https://github.com/oncumuhammed/web-teknolojileri" target="_blank">github.com/oncumuhammed/web-teknolojileri</a></td>
+        </tr>
+        <tr>
+            <td>🌐 Canlı Site:</td>
+            <td><a href="https://oncumuhammed.liveblog365.com/" target="_blank">oncumuhammed.liveblog365.com</a></td>
+        </tr>
+    </table>
+
+    <div class="date">Mayıs 2026</div>
+</div>
+
+<!-- ==============================
+     SAYFA İÇERİKLERİ
+     ============================== -->
+<div class="container">
+    <h2 class="report-title">📄 Proje Sayfaları ve Ekran Görüntüleri</h2>
+    <p class="report-subtitle">Projenin her menü sayfasına ait ekran görüntüsü ve kısa açıklaması aşağıda sunulmuştur.</p>
+
+    <!-- 1. Hakkında -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>1. Hakkında (Giriş) Sayfası <span class="file-name">index.html</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                Sayfa sahibini tanıtan kişisel bilgiler, motto, ilgi alanları (Vücut Geliştirme, IoT, Otomasyon),
+                medya öğeleri (profil resmi ve YouTube video embed) ve diğer sayfalara yönlendiren bağlantılar
+                içermektedir. Responsive tasarım Bootstrap 5 grid altyapısıyla sağlanmıştır.
+            </p>
+            <img src="website_SS/hakkında_Html.png" alt="Hakkında Sayfası Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Bootstrap 5</span>
+                <span class="tech-tag">Responsive</span>
+                <span class="tech-tag">YouTube Embed</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Özgeçmiş -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>2. Özgeçmiş (CV) Sayfası <span class="file-name">cv.html</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                Eğitim bilgileri, danışmanlık deneyimi, yazılım/otomasyon projeleri ve yeteneklerin
+                (Yapay Zeka, Web & Mobil, Sistem & Otomasyon kategorilerinde) yer aldığı özgeçmiş sayfasıdır.
+                Semantik HTML5 etiketleri (<code>header</code>, <code>section</code>, <code>article</code>,
+                <code>aside</code>) kullanılarak yapılandırılmıştır.
+            </p>
+            <img src="website_SS/özgeçmiş_Html.png" alt="Özgeçmiş Sayfası Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">Semantic HTML5</span>
+                <span class="tech-tag">header / section / article / aside</span>
+                <span class="tech-tag">Responsive Grid</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Şehrim -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>3. Şehrim Sayfası <span class="file-name">sehrim.html</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                Hatay'a ait tanıtıcı bilgiler (nüfus, bölge, plaka, kuruluş tarihi, gezilecek yerler) ve
+                6 resimden oluşan tıklanabilir bir Vanilla JavaScript slider (carousel) içermektedir.
+                Kültürel miras bölümünde Habib-i Neccar Camii ve Sen Piyer Kilisesi HTML elemanlarıyla
+                detaylandırılmıştır.
+            </p>
+            <img src="website_SS/sehrim_Html.png" alt="Şehrim Sayfası Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">JS Slider (6 resim)</span>
+                <span class="tech-tag">Tıklanabilir Dot/Ok</span>
+                <span class="tech-tag">Otomatik Geçiş</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Mirasımız -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>4. Mirasımız <span class="file-name">miras.html</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                Hatay'ın en önemli kültürel mirası olan Habib-i Neccar Camii'ni detaylıca ele alan sayfadır.
+                Tarihçe, mimari özellikler ve hoşgörü mirası bölümleri <code>figure</code>, <code>figcaption</code>,
+                <code>article</code>, <code>aside</code>, <code>dl/dt/dd</code>, <code>blockquote</code> ve
+                <code>section</code> gibi semantik HTML5 etiketleriyle yapılandırılmıştır.
+            </p>
+            <img src="website_SS/mirasımız_Html.png" alt="Mirasımız Sayfası Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">Semantic HTML5</span>
+                <span class="tech-tag">figure / figcaption</span>
+                <span class="tech-tag">dl / dt / dd</span>
+                <span class="tech-tag">blockquote</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Takımımız -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>5. Takımımız <span class="file-name">takim.html</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                Hatay'ın spor takımı Atakaş Hatayspor'un detaylı tanıtım sayfasıdır. Kulüp kimliği,
+                tarihçe, Süper Lig yolculuğu, başarılar, stadyum bilgileri ve sezon tablosu
+                HTML elemanlarıyla (<code>table</code>, <code>dl</code>, <code>aside</code>,
+                <code>article</code>, <code>blockquote</code>) detaylandırılmıştır.
+            </p>
+            <img src="website_SS/takımımız_Html.png" alt="Takımımız Sayfası Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">HTML Table</span>
+                <span class="tech-tag">aside / article</span>
+                <span class="tech-tag">blockquote</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. İlgi Alanlarım -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>6. İlgi Alanlarım (API Entegrasyonu) <span class="file-name">ilgi-alanlarim.html</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                TVMaze API üzerinden siber güvenlik, dövüş sanatları ve teknoloji temalı dizi verilerinin
+                JavaScript Fetch API ile asenkron olarak çekilip listelendiği sayfadır.
+                <strong>Döviz veya hava durumu API'si kullanılmamıştır.</strong>
+                Promise.all ile çoklu sorgu yapılmaktadır.
+            </p>
+            <img src="website_SS/ilgi_alanlarım_Html.png" alt="İlgi Alanlarım Sayfası Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">TVMaze API</span>
+                <span class="tech-tag">Fetch API</span>
+                <span class="tech-tag">Promise.all</span>
+                <span class="tech-tag">Asenkron JS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. İletişim -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>7. İletişim Sayfası <span class="file-name">iletisim.html</span> + <span class="file-name">islem.php</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                Tüm form elemanlarını (text, email, telefon, select, radio, checkbox, textarea) içeren iletişim
+                formudur. Form verileri hem <strong>Native JavaScript</strong> hem de <strong>Vue.js 3</strong>
+                ile iki farklı butonda ayrı ayrı denetlenmektedir (boşluk, e-mail formatı, telefon sadece rakam vb.).
+                HTML5'in <code>required</code> attribute'ı tek başına kullanılmamıştır.
+                Doğrulanan veriler <code>islem.php</code> sayfasında düzenli şekilde ekrana yazdırılmaktadır.
+            </p>
+            <img src="website_SS/iletisim.Html.png" alt="İletişim Sayfası Ekran Görüntüsü">
+            <p style="margin-top: 16px;">
+                Aşağıda formdaki verilerin PHP tarafında işlenerek ekrana yazdırıldığı
+                <code>islem.php</code> sayfasının ekran görüntüsü yer almaktadır:
+            </p>
+            <img src="website_SS/form_Html.png" alt="Form Sonuç (islem.php) Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">Native JavaScript</span>
+                <span class="tech-tag">Vue.js 3</span>
+                <span class="tech-tag">İki Ayrı Doğrulama Butonu</span>
+                <span class="tech-tag">PHP Form İşleme</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Login -->
+    <div class="page-section">
+        <div class="section-header">
+            <h3>8. Login (Giriş) Sayfası <span class="file-name">login.html</span> + <span class="file-name">giris.php</span></h3>
+        </div>
+        <div class="section-body">
+            <p>
+                Öğrenci numarası formatında e-posta (<code>b251210377@sakarya.edu.tr</code>) ve şifre
+                (<code>b251210377</code>) ile güvenli giriş yapılabilen sistemdir.
+                Boş alan ve e-mail formatı kontrolü JavaScript ile sağlanmaktadır.
+                Başarılı girişte PHP üzerinden <strong>"Hoşgeldiniz b251210377"</strong> mesajı gösterilmekte,
+                başarısızlıkta hata mesajıyla login sayfasına yönlendirilmektedir.
+            </p>
+            <img src="website_SS/giris_Html.png" alt="Login Sayfası Ekran Görüntüsü">
+            <p style="margin-top: 16px;">
+                Başarılı giriş sonrası gösterilen "Hoşgeldiniz" sayfasının ekran görüntüsü:
+            </p>
+            <img src="website_SS/başarılıGiriş_Html.png" alt="Başarılı Giriş Ekran Görüntüsü">
+            <div class="tech-tags">
+                <span class="tech-tag">JavaScript Validasyon</span>
+                <span class="tech-tag">PHP POST</span>
+                <span class="tech-tag">Başarı/Hata Yönlendirme</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
